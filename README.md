@@ -1,6 +1,6 @@
 # GapJumpers
 
-[https://gapjumpers-web-design.web.app/](Final Solution)
+[Final Solution](https://gapjumpers-web-design.web.app/)
 
 A blind audition from a company called GapJumpers.com. 
 
