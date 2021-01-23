@@ -1,0 +1,38 @@
+<h2>Notes</h2>
+
+<h4>Power BI</h4>
+<p>Initially when I saw the task, I figured the best tool for the job was Power BI. Power BI allowed me to quickly import the data; and the interface
+  made it very easy to create the required graphs. Unfortunately due to the nature of the application, it was impossible to export to a more web-friendly format due
+  to the permissions Microsoft set on non-business users.
+</p>
+
+<h4>Angular, Firebase and Chart.js</h4>
+<p>After realising it may not be the best idea to soley submit a file with an unfamilar ''.pbix' format, I decided I'd attempt the problem using my preferred framework
+  and cloud service: Angular & Firebase. I converted the CSV file to JSON and imported it into Firebase, my aim was to make the solution more fitting for a real-world problem.
+  After connecting my Angular app to the database, I was able to manipulate the data to make it compitable with the Chart.js interface.
+</p>
+
+<h4>Dynamic Data Processing</h4>
+<p>I wanted to try and make the website interact seamlessly with the backend data as opposed to just having a static data source which can't be updated.
+  I managed to make good progress and now, if any new records are added to the original job listings, the graphs will update to reflect the changes
+</p>
+
+<p>For example, here is a before/after comparison of when a new person is added. The person is male who has a 'Not Contacted/Interviewed' disposition and applied for the Relationship Manager
+  role:
+</p>
+
+<p><b>Before</b></p>
+
+<img src="assets/img/beforeUpdateGapJ.png" height=357 width=1112>
+
+<p><b>Adding the new person</b></p>
+<img src="assets/img/firebaseUpdateGapJ.png" height=525 width=660>
+
+<p><b>After</b></p>
+
+<img src="assets/img/afterUpdateGapJ.png" height=357 width=1112>
+
+<h4>Final thoughts</h4>
+<p>I am happy with the final solution, I would've liked an extra day to create more graphs and utlise more data however I feel like the application has been built robustly to allow for
+  updates in the future.
+</p>

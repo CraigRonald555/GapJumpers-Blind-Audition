@@ -1,0 +1,82 @@
+<h2>Summary</h2>
+
+<h4>Relationship Manager <small> - {{firebaseData['Relationship Manager'].length}} Applicants</small></h4>
+
+<div class="row" *ngIf="firebaseData['Relationship Manager']['maleCount'] && firebaseData['Relationship Manager']['femaleCount']">
+
+  <div class="col-md-4">
+    <p>Stats</p>
+    Male applicants <small> - {{firebaseData['Relationship Manager']['maleCount']}}</small>
+    <p><ngb-progressbar type="success" textType="white" [value]="firebaseData['Relationship Manager']['maleCount']/firebaseData['Relationship Manager'].length * 100" [showValue]="true"></ngb-progressbar></p>
+    Female applicants <small> - {{firebaseData['Relationship Manager']['femaleCount']}}</small>
+    <p><ngb-progressbar type="info" textType="white" [value]="firebaseData['Relationship Manager']['femaleCount']/firebaseData['Relationship Manager'].length * 100" [showValue]="true"></ngb-progressbar></p>
+  </div>
+
+  <div class="col-md-7">
+    <p>Visual</p>
+    <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+      </canvas>
+  </div>
+
+</div>
+
+<h4>Relationship Advisor <small> - {{firebaseData['Relationship Advisor'].length}} Applicants</small></h4>
+
+<div class="row" *ngIf="firebaseData['Relationship Advisor']['maleCount'] && firebaseData['Relationship Advisor']['femaleCount']">
+
+  <div class="col-md-4">
+    <p>Stats</p>
+    Male applicants <small> - {{firebaseData['Relationship Advisor']['maleCount']}}</small>
+    <p><ngb-progressbar type="success" textType="white" [value]="firebaseData['Relationship Advisor']['maleCount']/firebaseData['Relationship Advisor'].length * 100" [showValue]="true"></ngb-progressbar></p>
+    Female applicants <small> - {{firebaseData['Relationship Advisor']['femaleCount']}}</small>
+    <p><ngb-progressbar type="info" textType="white" [value]="firebaseData['Relationship Advisor']['femaleCount']/firebaseData['Relationship Advisor'].length * 100" [showValue]="true"></ngb-progressbar></p>
+  </div>
+
+  <div class="col-md-7">
+    <p>Visual</p>
+    <canvas baseChart
+      [datasets]="barChartData2"
+      [labels]="barChartLabels2"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+      </canvas>
+  </div>
+
+</div>
+
+<!-- <div *ngFor="let job of this.firebaseData | keyvalue; let i = index">
+  <h4>{{job.key}} <small> - {{job.value.length}} Applicants</small></h4>
+
+  <div class="row" *ngIf="job.value.maleCount && job.value.femaleCount">
+
+    <div class="col-md-4">
+      <p>Stats</p>
+      Male applicants <small> - {{job.value.maleCount}}</small>
+      <p><ngb-progressbar type="success" textType="white" [value]="job.value.maleCount/job.value.length * 100" [showValue]="true"></ngb-progressbar></p>
+      Female applicants <small> - {{job.value.femaleCount}}</small>
+      <p><ngb-progressbar type="info" textType="white" [value]="job.value.femaleCount/job.value.length * 100" [showValue]="true"></ngb-progressbar></p>
+    </div>
+
+    <div class="col-md-7">
+      <p>Visual</p>
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+        </canvas>
+    </div>
+
+  </div>
+
+</div> -->

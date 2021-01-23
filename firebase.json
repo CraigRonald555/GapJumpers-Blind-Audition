@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/GapJumpers",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
